@@ -1,10 +1,11 @@
-/* function getPlayerChoice();
+/* 
+function getPlayerChoice();
 function cleanPlayerChoice();
 function getComputerChoice();
 function game();
 function playRound(); */
 
-function getPlayerChoice(){
+function getPlayerChoice(){ // Get player's choice
     let player_prompt=prompt('Enter your choice, fighter! [rock, paper, scissor]','rock');
     player_prompt=cleanPlayerChoice(player_prompt);
     console.log(player_prompt);
@@ -34,3 +35,9 @@ function cleanPlayerChoice(player_prompt){
     return (player_prompt);
 }
 
+function getComputerChoice(){
+    const choice_list=['rock','paper','scissor'];
+    let random_index=Math.floor(Math.random()*3);
+    let computerChoice=choice_list[random_index];
+    return (computerChoice);
+}
