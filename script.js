@@ -18,39 +18,37 @@ function cleanPlayerChoice(playerChoice){
     
     switch(playerChoice){
         case 'rock':
-            case 'rocks':
-                playerChoice='rock';
-                break;
+        case 'rocks':
+            playerChoice='rock';
+            break;
         case 'paper':
-            case 'papers':
-                playerChoice='paper';
-                break;
+        case 'papers':
+            playerChoice='paper';
+            break;
         case 'scissor':
-            case 'scissors':
-                playerChoice='scissor';
-                break;
+        case 'scissors':
+            playerChoice='scissors';
+            break;
         default:
             playerChoice=null;
+            break;
     }
 
     return (playerChoice);
 }
 
 function getComputerChoice(){
-    const choice_list=['rock','paper','scissor'];
+    const choice_list=['rock','paper','scissors'];
     let random_index=Math.floor(Math.random()*3);
     let computerChoice=choice_list[random_index];
     return (computerChoice);
 }
 
 function playRound(playerChoice){
-<<<<<<< HEAD
     // Function returns player's result.
     // 0 if player lost
     // 1 if player won
     // null if it's a draw
-=======
->>>>>>> eed5fe447106bda969ad7b61c748c3d40371caf0
     const choiceIndexPair={'rock':0,'paper':1,'scissor':2};
     let computerChoice=getComputerChoice();
     let playerChoiceIndex=choiceIndexPair[playerChoice];
@@ -69,7 +67,31 @@ function playRound(playerChoice){
     else{
         result=1;
     }
-    console.log("Player choice",playerChoice);
-    console.log("Computer choice",computerChoice);
     return (result);
+}
+
+function game(){
+    let total_rounds=parseInt(prompt("Enter the number of rounds you'll fight for, fighter!"));
+    let win,loss,draw;
+    win=loss=draw=0;
+    let playerChoice=getPlayerChoice();
+
+    for (i=1;i<=total_rounds;i++){
+        let result=playRound(playerChoice);
+        
+        switch(result){
+            case 0:
+                loss++;
+                break;
+            case 1:
+                win++;
+                break;
+            default:
+                draw++;
+                break;
+        }
+    }
+
+    return (`\nOut of ${total_rounds} rounds you played with ${playerChoice}\nYou Won: ${win}\nLost: ${loss}\nand Drew: ${draw} `);
+    
 }
