@@ -3,36 +3,37 @@ function getPlayerChoice();
 function cleanPlayerChoice();
 function getComputerChoice();
 function game();
-function playRound(); */
+function playRound();*/
 
 function getPlayerChoice(){ // Get player's choice
-    let player_prompt=prompt('Enter your choice, fighter! [rock, paper, scissor]','rock');
-    player_prompt=cleanPlayerChoice(player_prompt);
-    console.log(player_prompt);
+    let playerChoice=prompt('Enter your choice, fighter! [rock, paper, scissor]','rock');
+    playerChoice=cleanPlayerChoice(playerChoice);
+    if (!playerChoice) getPlayerChoice();
+    return (playerChoice);
 }
 
-function cleanPlayerChoice(player_prompt){
-    player_prompt=player_prompt.toLowerCase(); // convert to lower case
-    player_prompt=player_prompt.trim();       // remove whitespace
+function cleanPlayerChoice(playerChoice){
+    playerChoice=playerChoice.toLowerCase(); // convert to lower case
+    playerChoice=playerChoice.trim();       // remove whitespace
     
-    switch(player_prompt){
+    switch(playerChoice){
         case 'rock':
             case 'rocks':
-                player_prompt='rock';
+                playerChoice='rock';
                 break;
         case 'paper':
             case 'papers':
-                player_prompt='paper';
+                playerChoice='paper';
                 break;
         case 'scissor':
             case 'scissors':
-                player_prompt='scissor';
+                playerChoice='scissor';
                 break;
         default:
-            player_prompt=null;
+            playerChoice=null;
     }
 
-    return (player_prompt);
+    return (playerChoice);
 }
 
 function getComputerChoice(){
@@ -40,4 +41,28 @@ function getComputerChoice(){
     let random_index=Math.floor(Math.random()*3);
     let computerChoice=choice_list[random_index];
     return (computerChoice);
+}
+
+function playRound(playerChoice){
+    const choiceIndexPair={'rock':0,'paper':1,'scissor':2};
+    let computerChoice=getComputerChoice();
+    let playerChoiceIndex=choiceIndexPair[playerChoice];
+    let computerChoiceIndex=choiceIndexPair[computerChoice];
+    let choiceIndexPairLength= Object.keys(choiceIndexPair).length;
+    let result=null;
+
+    if (playerChoiceIndex==computerChoiceIndex){
+    }
+    else if ((playerChoiceIndex!=(choiceIndexPairLength-1))&&(computerChoiceIndex==playerChoiceIndex+1)){
+        result=0;
+    }
+    else if ((playerChoiceIndex==(choiceIndexPairLength-1))&&(computerChoiceIndex==0)){
+        result=0;
+    }
+    else{
+        result=1;
+    }
+    console.log("Player choice",playerChoice);
+    console.log("Computer choice",computerChoice);
+    return (result);
 }
