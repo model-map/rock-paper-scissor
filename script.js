@@ -33,11 +33,7 @@ function cleanPlayerChoice(playerChoice){
             playerChoice='scissors';
             break;
         default:
-<<<<<<< HEAD
             playerChoice=null;              // if player enters an incorrect prompt set choice to null.
-=======
-            playerChoice=null;
->>>>>>> b676030f1e20981dee6166dd2c95348792099b69
             break;
     }
 
@@ -46,11 +42,7 @@ function cleanPlayerChoice(playerChoice){
 
 function getComputerChoice(){
     const choice_list=['rock','paper','scissors'];
-<<<<<<< HEAD
     let random_index=Math.floor(Math.random()*3); //Generate a random number from 0 to 2 for index.
-=======
-    let random_index=Math.floor(Math.random()*3);
->>>>>>> b676030f1e20981dee6166dd2c95348792099b69
     let computerChoice=choice_list[random_index];
     return (computerChoice);
 }
@@ -60,12 +52,14 @@ function playRound(playerChoice){
     // 0 if player lost
     // 1 if player won
     // null if it's a draw
-    const choiceIndexPair={'rock':0,'paper':1,'scissor':2};
+    const choiceIndexPair={'rock':0,'paper':1,'scissors':2};
     let computerChoice=getComputerChoice();
     let playerChoiceIndex=choiceIndexPair[playerChoice];
     let computerChoiceIndex=choiceIndexPair[computerChoice];
     let choiceIndexPairLength= Object.keys(choiceIndexPair).length;
     let result=null;
+
+/*     console.log(`Players choice ${playerChoice} and index ${playerChoiceIndex}\nComputer choice ${computerChoice} and index ${computerChoiceIndex}`); */
 
     if (playerChoiceIndex==computerChoiceIndex){
     }
