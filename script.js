@@ -44,10 +44,13 @@ function getComputerChoice(){
 }
 
 function playRound(playerChoice){
+<<<<<<< HEAD
     // Function returns player's result.
     // 0 if player lost
     // 1 if player won
     // null if it's a draw
+=======
+>>>>>>> eed5fe447106bda969ad7b61c748c3d40371caf0
     const choiceIndexPair={'rock':0,'paper':1,'scissor':2};
     let computerChoice=getComputerChoice();
     let playerChoiceIndex=choiceIndexPair[playerChoice];
