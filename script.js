@@ -9,35 +9,9 @@ Function list:
 
 function getPlayerChoice(){ // Get player's choice
     let playerChoice=prompt('Enter your choice, fighter! [rock, paper, scissor]','rock');
-    playerChoice=cleanPlayerChoice(playerChoice);
-    if (!playerChoice) getPlayerChoice();     // if playerChoice is null it'll result false
-                                             // player will be prompted until they enter acceptable choice
-    return (playerChoice);
-}
-
-function cleanPlayerChoice(playerChoice){
-    playerChoice=playerChoice.toLowerCase(); // convert to lower case
-    playerChoice=playerChoice.trim();       // remove whitespace
-    
-    switch(playerChoice){
-        case 'rock':
-        case 'rocks':
-            playerChoice='rock';
-            break;
-        case 'paper':
-        case 'papers':
-            playerChoice='paper';
-            break;
-        case 'scissor':
-        case 'scissors':
-            playerChoice='scissors';
-            break;
-        default:
-            playerChoice=null;              // if player enters an incorrect prompt set choice to null.
-            break;
-    }
-
-    return (playerChoice);
+    playerChoice=playerChoice.toLowerCase().trim();
+    if (!['rock','paper','scissors'].includes(playerChoice)) getPlayerChoice();
+    return playerChoice;
 }
 
 function getComputerChoice(){
@@ -57,26 +31,26 @@ function playRound(playerChoice){
     let playerChoiceIndex=choiceIndexPair[playerChoice];
     let computerChoiceIndex=choiceIndexPair[computerChoice];
     let choiceIndexPairLength= Object.keys(choiceIndexPair).length;
-    let result=null;
+    let result='draw';
 
 /*     console.log(`Players choice ${playerChoice} and index ${playerChoiceIndex}\nComputer choice ${computerChoice} and index ${computerChoiceIndex}`); */
 
     if (playerChoiceIndex==computerChoiceIndex){
     }
     else if ((playerChoiceIndex!=(choiceIndexPairLength-1))&&(computerChoiceIndex==playerChoiceIndex+1)){
-        result=0;
+        result='loss';
     }
     else if ((playerChoiceIndex==(choiceIndexPairLength-1))&&(computerChoiceIndex==0)){
-        result=0;
+        result='loss';
     }
     else{
-        result=1;
+        result='win';
     }
     return (result);
 }
 
 function game(){
-    let total_rounds=parseInt(prompt("Enter the number of rounds you'll fight for, fighter!"));
+    let total_rounds=parseInt(prompt("Enter the number of rounds you'll fight for, fighter!",100));
     let win,loss,draw;
     win=loss=draw=0;
     let playerChoice=getPlayerChoice();
@@ -85,10 +59,10 @@ function game(){
         let result=playRound(playerChoice);
         
         switch(result){
-            case 0:
+            case 'loss':
                 loss++;
                 break;
-            case 1:
+            case 'win':
                 win++;
                 break;
             default:
