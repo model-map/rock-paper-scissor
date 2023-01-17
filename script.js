@@ -1,7 +1,6 @@
 /* 
 Function list:
     function getPlayerChoice();
-    function cleanPlayerChoice();
     function getComputerChoice();
     function playRound();
     function game();
