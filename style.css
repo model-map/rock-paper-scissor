@@ -1,0 +1,23 @@
+body{
+    background-color: #3b3b3b;
+    color:#ddd;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+body>*{
+    margin:50px;
+}
+
+#rock{
+    position:fixed;
+    transition: all 0.5s ease-in-out;
+}
+
+.container{
+    height:50vh;
+    width:70vw;
+    border: 1px solid yellow;
+}
