@@ -7,13 +7,18 @@ body{
     box-sizing: border-box;
 }
 
+img{
+    height:40px;
+    width:50px;
+}
+
 body>*{
     margin:50px;
 }
 
-#rock{
-    position:fixed;
-    transition: all 0.5s ease-in-out;
+#rock,#paper{
+    position:absolute;
+    transition: all 1s ease-in-out;
 }
 
 .container{
