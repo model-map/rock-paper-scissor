@@ -6,6 +6,8 @@ Function list:
     function game();
 */
 
+// Git Branch: rps-ui2
+
 function getPlayerChoice(){ // Get player's choice
     let playerChoice=prompt('Enter your choice, fighter! [rock, paper, scissor]','rock');
     playerChoice=playerChoice.toLowerCase().trim();
