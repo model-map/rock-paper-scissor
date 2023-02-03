@@ -104,7 +104,7 @@ function bgColor(){
 
 const easteregg=document.querySelector('.easteregg');
 easteregg.addEventListener('mouseover',()=>{
-    const bgInterval=setInterval(bgColor,500);
+    const bgInterval=setInterval(bgColor,1000);
     easteregg.addEventListener('mouseout',()=>{
         clearInterval(bgInterval);
 /*         body.style['background-color']=`#4B231B`;
