@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3b3b3b;
+    color:#ccc;
+}
+
+.button{
+    height:100px;
+    width:100px;
+}
+
+/* FLEXBOXES */
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.score{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 3vw;
+}
+
+@media screen and (max-width: 768px) {
+    .score{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+  }
+
+/* DECORATION */
+h1{
+    text-align: center;
+}
