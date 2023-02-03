@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+input{
+    height:10vh;
+    width:10vw;
+}
+
 /* FLEXBOXES and ITS PROPERTIES*/
 
 body{

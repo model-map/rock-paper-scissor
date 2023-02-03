@@ -50,7 +50,7 @@ function playRound(playerChoice){
     return (result);
 }
 
-const buttons       =document.querySelectorAll('button');
+const buttons       =document.querySelectorAll('.button');
 const matchesPlayed =document.querySelector('#matchesPlayed');
 const matchResult   =document.querySelectorAll('.matchResult');
 
