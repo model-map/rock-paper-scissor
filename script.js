@@ -71,3 +71,44 @@ buttons.forEach((choice)=>{
         matchesPlayed.textContent=parseInt(matchesPlayed.textContent)+1;
     });
 })
+
+// h1 element animation
+
+const h1=document.querySelector('h1');
+h1.addEventListener('mouseover',()=>{
+    h1.textContent='DONT TOUCH ME!!';
+});
+h1.addEventListener('click',()=>{
+    h1.textContent="DONT CLICK ME EITHER!!!";
+})
+h1.addEventListener('dblclick',()=>{
+    h1.textContent="IM CALLING MY LAWYER!!!!";
+})
+h1.addEventListener('mouseout',()=>{
+    h1.textContent='Rock Paper Scissor Deathmatch!';
+});
+const body=document.querySelector('body');
+const p = document.querySelector('p');
+// EASTER EGG
+function colorRandomiser(){
+    let red=Math.floor(Math.random()*255);
+    let green=Math.floor(Math.random()*255);
+    let blue=Math.floor(Math.random()*255);
+    return (`rgb(${red},${green},${blue})`);
+}
+function bgColor(){
+    body.style['background-color']=`${colorRandomiser()}`;
+    h1.style['color']=`${colorRandomiser()}`;
+    p.style['color']=`${colorRandomiser()}`;
+}
+
+const easteregg=document.querySelector('.easteregg');
+easteregg.addEventListener('mouseover',()=>{
+    const bgInterval=setInterval(bgColor,500);
+    easteregg.addEventListener('mouseout',()=>{
+        clearInterval(bgInterval);
+/*         body.style['background-color']=`#4B231B`;
+        h1.style['color']="yellow";
+        p.style['color']=`#bfa602`; */
+    })
+});

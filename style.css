@@ -72,6 +72,7 @@ body{
 body{
     background-color: #4B231B;
     color:#ccc;
+    transition: all 0.5s ease-in-out;
 }
 
 h1,p{
@@ -83,11 +84,12 @@ h1{
 }
 
 p{
-    color:#A38D00;
+    color:#bfa602;
 }
 
 input:hover,
-input:active{
+input:active,
+.shake{
     animation: 150ms tilt-shaking infinite;
 }
 
@@ -110,6 +112,13 @@ p{
 
 .container{
     padding:3em;
-    border-radius:10%;
+    border-radius:5%;
     box-shadow: -10px -10px 1000px #281C15;
+}
+
+.easteregg{
+    align-self: flex-end;
+    height:1vh;
+    width:1vw;
+    background-color: blueviolet;
 }
