@@ -2,26 +2,51 @@
     box-sizing: border-box;
 }
 
+/* FLEXBOXES and ITS PROPERTIES*/
+
 body{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #3b3b3b;
-    color: #ccc;
-    gap:2vw;
+    flex-wrap:wrap;
 }
 
 h1{
     align-self: center;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
 .buttons{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .score{
-    display:flex;
+    display: flex;
     justify-content: center;
-    gap:15.5vw;
+}
+
+/* MARGINS, PADDINGS AND GAPS */
+
+body{
+    gap:2vw;
+    margin:2.5vw 10vw;
+}
+
+.container{
+    margin:1vh 5vw;
+}
+
+.score{
+    gap: 10vw;
+}
+
+/* COLOURS */
+
+body{
+    background-color: #3b3b3b;
+    color: #ccc;
 }
