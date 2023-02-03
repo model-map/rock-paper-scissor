@@ -70,7 +70,7 @@ body{
 /* DECORATION */
 
 body{
-    background-color: #4B231B;
+    background-color: #570332;
     color:#ccc;
     transition: all 1s ease-in-out;
 }
@@ -80,11 +80,11 @@ h1,p{
 }
 
 h1{
-    color: yellow;
+    color: #f4e290;
 }
 
 p{
-    color:#bfa602;
+    color:#74e7cd;
 }
 
 input:hover,
@@ -113,7 +113,7 @@ p{
 .container{
     padding:3em;
     border-radius:5%;
-    box-shadow: -10px -10px 1000px #281C15;
+    box-shadow: 10px 10px 100px #51022f;
 }
 
 .easteregg{
