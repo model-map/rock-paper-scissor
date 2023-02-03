@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #3b3b3b;
+    color: #ccc;
+    gap:2vw;
+}
+
+h1{
+    align-self: center;
+}
+
+.buttons{
+    display:flex;
+    justify-content: space-around;
+}
+
+.score{
+    display:flex;
+    justify-content: center;
+    gap:15.5vw;
+}
