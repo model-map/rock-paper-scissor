@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #3b3b3b;
-    color:#ccc;
-}
-
 .button{
     height:100px;
     width:100px;
@@ -40,8 +35,9 @@ body{
 
 .score{
     display:flex;
+    flex-direction: column;
     flex-wrap:wrap;
-    gap: 5vw;
+    gap: 2vw;
     justify-content: center;
 }
 
@@ -51,7 +47,7 @@ body{
         transform: scale(0.85)
     }
     .container{
-        gap:20vw;
+        gap:15vw;
     }
     .score{
         display:flex;
@@ -73,8 +69,21 @@ body{
 
 /* DECORATION */
 
+body{
+    background-color: #4B231B;
+    color:#ccc;
+}
+
 h1,p{
     text-align: center;
+}
+
+h1{
+    color: yellow;
+}
+
+p{
+    color:#A38D00;
 }
 
 input:hover,
@@ -89,3 +98,18 @@ input:active{
     75% { transform: scale(1.75) rotate(-5deg); }
     100% { transform: scale(1.75) rotate(0deg); }
   }
+
+p{
+    transition: all 0.25s ease-in-out;
+}
+
+.bing{
+    transform: scale(1.5);
+    color:#FFE500;
+}
+
+.container{
+    padding:3em;
+    border-radius:10%;
+    box-shadow: -10px -10px 1000px #281C15;
+}

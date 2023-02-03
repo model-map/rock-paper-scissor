@@ -7,17 +7,18 @@
     <title>Document</title>
     <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
 </head>
 <body>
-    <h1>Rock Paper Scissor Deathmatch!</h1>
+    <h1 class="shake-little shake-constant">Rock Paper Scissor Deathmatch!</h1>
     <div class="container">
         <div class="buttons">
-            <input type="image" class="button" src="./assets/rock.png" id="rock">
+            <input type="image" class="button " src="./assets/rock.png" id="rock">
             <input type="image" class="button" src="./assets/paper.png" id="paper">
             <input type="image" class="button" src="./assets/scissor.png"  id="scissors">
         </div>
-        <div class="score">
-            <p>MATCHES PLAYED: <span class="matchResult" id="matchesPlayed">0</span></p>
+        <div class="score shake-opacity">
+            <p style="font-size:200%">MATCHES PLAYED: <span class="matchResult" id="matchesPlayed">0</span></p>
             <p>MATCHES WON: <span class="matchResult" id="win">0</span></p>
             <p>MATCHES LOST: <span class="matchResult" id="loss">0</span></p>
             <p>MATCHES DREW: <span class="matchResult" id="draw">0</span></p>

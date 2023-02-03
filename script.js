@@ -61,6 +61,11 @@ buttons.forEach((choice)=>{
         matchResult.forEach((outcome)=>{
             if (outcome.id==result){
                 outcome.textContent=parseInt(outcome.textContent)+1;
+                const outcomeParent=outcome.parentElement
+                outcomeParent.classList.add("bing");
+                outcomeParent.addEventListener('transitionend',()=>outcomeParent.classList.remove("bing"));
+
+                console.log(outcome);
             }
         })
         matchesPlayed.textContent=parseInt(matchesPlayed.textContent)+1;
